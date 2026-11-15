@@ -1,0 +1,353 @@
+:root {
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  background: #fff;
+  height: 100svh;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.screen {
+  background: #fff;
+  display: flex;
+  height: 100%;
+  inset: 0;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(22px);
+  transition: opacity .55s ease, transform .65s cubic-bezier(.2, .8, .2, 1);
+}
+
+.intro {
+  background: #fff url('assets/Ativo 13.svg') center / cover no-repeat;
+}
+
+.screen--active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.screen.is-exiting {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.intro.is-exiting .intro-assets .asset {
+  animation: asset-out .42s ease forwards;
+}
+
+.intro.is-exiting .intro-assets .asset:nth-child(1) { animation-delay: 0s; }
+.intro.is-exiting .intro-assets .asset:nth-child(2) { animation-delay: .06s; }
+.intro.is-exiting .intro-assets .asset:nth-child(3) { animation-delay: .12s; }
+.intro.is-exiting .intro-assets .asset:nth-child(4) { animation-delay: .18s; }
+
+.detail.is-entering .detail-inner > * {
+  animation: asset-in .72s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.detail.is-entering .detail-inner > *:nth-child(1) { animation-delay: .16s; }
+.detail.is-entering .detail-inner > *:nth-child(2) { animation-delay: .28s; }
+.detail.is-entering .detail-inner > *:nth-child(3) { animation-delay: .4s; }
+.detail.is-entering .detail-inner > *:nth-child(4) { animation-delay: .52s; }
+
+@keyframes asset-out {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(-12px) scale(.96); }
+}
+
+@keyframes asset-in {
+  from { opacity: 0; transform: translateY(20px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.intro-assets,
+.detail-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-assets {
+  gap: clamp(42px, 7.5vh, 86px);
+  max-height: 92svh;
+  width: min(72vw, 560px);
+}
+
+.asset {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.asset-3 {
+  width: min(46.8vw, 424px);
+}
+
+.asset-4,
+.asset-5 {
+  width: min(25.2vw, 161px);
+}
+
+.asset-1 {
+  width: min(43.2vw, 347px);
+}
+
+.detail-inner {
+  gap: clamp(24px, 4.5vh, 58px);
+  max-height: 96svh;
+  position: relative;
+  width: min(92vw, 950px);
+  z-index: 1;
+}
+
+.detail-4 {
+  width: min(42vw, 268px);
+}
+
+.detail-14 {
+  width: min(88vw, 920px);
+}
+
+.detail-16 {
+  width: min(88vw, 830px);
+}
+
+.calendar-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  padding: 0;
+}
+
+.calendar-button img {
+  display: block;
+  width: min(32vw, 168px);
+}
+
+.bottom-art {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: min(88vw, 960px);
+}
+
+.detail-12 {
+  width: 100%;
+}
+
+.detail-13-overlay {
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
+  opacity: .4;
+  position: absolute;
+  width: 100%;
+}
+
+.detail {
+  overflow: hidden;
+}
+
+.detail::before {
+  background: url('assets/Ativo 13.svg') center / cover no-repeat;
+  content: '';
+  display: block;
+  inset: -10%;
+  position: absolute;
+  transform: scale(1.08);
+}
+
+.detail--route-2 {
+  overflow: hidden;
+}
+
+.detail--route-2::before {
+  inset: 0;
+  transform: none;
+  z-index: 0;
+}
+
+.detail--route-2 .detail-inner {
+  z-index: auto;
+}
+
+.detail--route-2 .bottom-art {
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.detail--route-2 .detail-4,
+.detail--route-2 .detail-16,
+.detail--route-2 .calendar-button {
+  position: relative;
+  z-index: 3;
+}
+
+.detail--route-2 .detail-13-overlay {
+  display: none;
+}
+
+.detail-inner--route-2 {
+  gap: clamp(20px, 3.2vh, 40px);
+}
+
+@media (min-width: 761px) {
+  .intro-assets {
+    gap: 64px;
+  }
+
+  .detail-4 {
+    width: min(21vw, 134px);
+  }
+
+  .detail-inner {
+    gap: 32px;
+  }
+
+  .detail-14,
+  .detail-16 {
+    max-height: 66svh;
+    width: auto;
+  }
+
+  .detail-12 {
+    max-height: 34svh;
+    width: auto;
+  }
+
+  .bottom-art {
+    width: 62vw;
+  }
+
+  .detail--route-2 .detail-inner {
+    transform: scale(1.08);
+  }
+
+  .detail--route-2 .bottom-art {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .intro-assets {
+    gap: clamp(42px, 7.5vh, 72px);
+    width: 72vw;
+  }
+
+  .asset-3 {
+    width: 76vw;
+  }
+
+  .asset-1 {
+    width: 70vw;
+  }
+
+  .asset-4,
+  .asset-5 {
+    width: 28vw;
+  }
+
+  .detail::before {
+    display: none;
+    inset: 0;
+    transform: none;
+  }
+
+  .detail--route-2 .bottom-art {
+    display: flex;
+  }
+
+  .detail--route-2 .calendar-button {
+    transform: translateY(-80%);
+  }
+
+  .detail-inner {
+        gap: 130px;
+        max-height: 995svh;
+        width: 92vw;
+  }
+
+  .detail--route-1 .detail-inner {
+    transform: translateY(-3vh);
+  }
+
+  .detail-4 {
+    width: 28vw;
+  }
+
+  .detail-14 {
+    width: 98vw;
+  }
+
+  .detail-16 {
+    width: 88vw;
+  }
+
+  .calendar-button {
+    display: block;
+  }
+
+  .bottom-art {
+    bottom: max(0px, env(safe-area-inset-bottom));
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 1;
+  }
+
+  .detail-inner--route-2>.detail-4,
+  .detail-inner--route-2>.detail-16,
+  .detail-inner--route-2>.calendar-button {
+    position: relative;
+    z-index: 3;
+  }
+
+  .detail-inner--route-2 {
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
+
+  .detail-12 {
+    max-height: 36svh;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .detail-13-overlay {
+    max-height: 36svh;
+  }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 955.18 537.29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <filter id="drop-shadow-1" x="0" y="0" width="955.18" height="537.29" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath">
+      <path class="cls-1" d="M410.81,275.06s-1.06-32.77,32.48-35.05c0,0-20.96-33.92,11.81-42.3,0,0-17.91-20.58,0-25.91,8.58-2.56,11.63-5.11,12.48-7.08,1.63-3.78,5.5-6.17,9.61-6.14,4.83.04,8.82,3.14,14.4,9.03,6.86,7.24,12.2,8,12.2,8,0,0,1.08,8.41-7.24,19.81,0,0,8.01-5.13,23.33,10.29,13.25,13.34-9.24,32.39-9.24,32.39,0,0-4.91-4.15,19.82,8,22.48,11.06-1.52,28.2-1.52,28.2,0,0,39.24,4.58,41.53,26.68,2.24,21.67-21.72,46.1-21.72,46.1,0,0-53.72,31.25-143.28-1.9C405.47,345.18,357.84,295.64,410.81,275.06Z"/>
+    </clipPath>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g class="cls-2">
+      <g class="cls-3">
+        <image width="1920" height="1080" transform="scale(.5)" xlink:href="../../../Downloads/asdfghjklç.png"/>
+      </g>
+    </g>
+  </g>
+</svg>
