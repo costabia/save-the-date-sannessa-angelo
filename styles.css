@@ -344,7 +344,7 @@ button {
 }
 
 .detail--route-2 .detail-13-overlay {
-  display: none;
+  display: block;
 }
 
 .detail-inner--route-2 {
@@ -485,4 +485,8 @@ button {
   .detail-13-overlay {
     max-height: 36svh;
   }
+}
+
+.detail--route-2 .bottom-art {
+  display: flex;
 }

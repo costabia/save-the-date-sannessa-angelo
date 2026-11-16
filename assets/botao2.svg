@@ -3,35 +3,38 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
-        opacity: .3;
-        stroke: #092a41;
-        stroke-miterlimit: 10;
-        stroke-width: .75px;
-      }
-
-      .cls-2 {
         letter-spacing: -.11em;
       }
 
-      .cls-3 {
-        letter-spacing: -.1em;
+      .cls-2 {
+        letter-spacing: -.19em;
       }
 
-      .cls-4 {
+      .cls-3 {
         letter-spacing: -.09em;
       }
 
-      .cls-5 {
-        letter-spacing: -.1em;
-      }
-
-      .cls-6 {
+      .cls-4 {
         letter-spacing: -.12em;
       }
 
+      .cls-5 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-6 {
+        fill: #fff;
+        font-family: 'CinzelRoman_480.000wght', Cinzel;
+        font-size: 25.18px;
+        font-variation-settings: 'wght' 480;
+      }
+
       .cls-7 {
-        letter-spacing: -.19em;
+        fill: #092a41;
+        opacity: .6;
+        stroke: #092a41;
+        stroke-miterlimit: 10;
+        stroke-width: .75px;
       }
 
       .cls-8 {
@@ -39,21 +42,22 @@
       }
 
       .cls-9 {
-        letter-spacing: -.2em;
+        letter-spacing: -.1em;
       }
 
       .cls-10 {
-        fill: #092a41;
-        font-family: Cinzel-Regular, Cinzel;
-        font-size: 25.18px;
-        font-variation-settings: 'wght' 400;
+        letter-spacing: -.1em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.1em;
       }
     </style>
   </defs>
   <g id="Camada_1-2" data-name="Camada 1">
     <g>
-      <path class="cls-1" d="M43.67.38h221.92c18.38,0,33.3,14.92,33.3,33.3v10c0,18.38-14.92,33.3-33.3,33.3H33.67C15.3,76.97.37,62.05.37,43.67H.37C.37,19.78,19.78.38,43.67.38Z"/>
-      <text class="cls-10" transform="translate(39.77 48.69)"><tspan class="cls-8" x="0" y="0">SA</tspan><tspan class="cls-9" x="25.46" y="0">L</tspan><tspan class="cls-7" x="34.67" y="0">V</tspan><tspan class="cls-8" x="48.45" y="0">AR </tspan><tspan class="cls-3" x="83.07" y="0">N</tspan><tspan class="cls-4" x="101.65" y="0">A </tspan><tspan class="cls-6" x="121.45" y="0">A</tspan><tspan class="cls-2" x="136.28" y="0">G</tspan><tspan class="cls-5" x="153.53" y="0">EN</tspan><tspan class="cls-6" x="184.3" y="0">D</tspan><tspan class="cls-8" x="201.52" y="0">A</tspan></text>
+      <path class="cls-7" d="M265.59,76.97H33.67c-18.39,0-33.3-14.91-33.3-33.3H.38c0-23.91,19.39-43.3,43.3-43.3h221.92c18.39,0,33.3,14.91,33.3,33.3v10c0-2.94-14.91,33.3-33.3,33.3Z"/>
+      <text class="cls-6" transform="translate(39.77 48.69)"><tspan class="cls-8" x="0" y="0">SA</tspan><tspan class="cls-2" x="26.19" y="0">LV</tspan><tspan class="cls-8" x="49.46" y="0">AR </tspan><tspan class="cls-9" x="84.58" y="0">N</tspan><tspan class="cls-8" x="103.37" y="0">A </tspan><tspan class="cls-4" x="123.18" y="0">A</tspan><tspan class="cls-1" x="138.07" y="0">G</tspan><tspan class="cls-10" x="155.57" y="0">E</tspan><tspan class="cls-11" x="168.06" y="0">N</tspan><tspan class="cls-5" x="186.87" y="0">D</tspan><tspan class="cls-3" x="204.27" y="0">A</tspan></text>
     </g>
   </g>
 </svg>
