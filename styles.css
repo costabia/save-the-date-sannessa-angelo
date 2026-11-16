@@ -487,6 +487,7 @@ button {
   }
 }
 
+
 .detail--route-2 .bottom-art {
   display: flex;
 }
@@ -519,6 +520,10 @@ button {
 
 #detail-route-2 .calendar-button {
   display: none;
+}
+
+#detail-route-2 .detail-4 {
+  transform: translateY(-10vh);
 }
 
 @media (max-width: 760px) {
