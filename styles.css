@@ -308,7 +308,7 @@ button {
 
 .detail--route-2 .calendar-button {
   left: 20%;
-  top: 17%;
+  top: 10%;
   display: block;
   position: fixed;
   transform: translate(-50%, -50%);
