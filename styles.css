@@ -388,7 +388,7 @@ button {
   }
 
   .asset-1 {
-    width: 70vw;
+    width: 50vw;
   }
 
   .asset-4,
@@ -419,7 +419,7 @@ button {
   }
 
   .detail-inner {
-        gap: 130px;
+        gap: 80px;
         max-height: 995svh;
         width: 92vw;
   }
