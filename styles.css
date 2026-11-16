@@ -76,6 +76,34 @@ button {
 .detail.is-entering .detail-inner > *:nth-child(3) { animation-delay: .4s; }
 .detail.is-entering .detail-inner > *:nth-child(4) { animation-delay: .52s; }
 
+.detail.is-entering .invitation-composition .composition-layer {
+  animation: composition-layer-in .72s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.detail.is-entering .detail-inner > .invitation-composition {
+  animation-delay: 0s;
+}
+
+.detail.is-entering .invitation-composition .composition-envelope {
+  animation-delay: .16s;
+}
+
+.detail.is-entering .invitation-composition .composition-fountain {
+  animation-delay: .24s;
+}
+
+.detail.is-entering .invitation-composition .composition-dog--top {
+  animation-delay: .46s;
+}
+
+.detail.is-entering .invitation-composition .composition-dog--bottom {
+  animation-delay: .54s;
+}
+
+.detail.is-entering .invitation-composition .composition-card {
+  animation-delay: .74s;
+}
+
 @keyframes asset-out {
   from { opacity: 1; transform: translateY(0) scale(1); }
   to { opacity: 0; transform: translateY(-12px) scale(.96); }
@@ -83,6 +111,11 @@ button {
 
 @keyframes asset-in {
   from { opacity: 0; transform: translateY(20px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes composition-layer-in {
+  from { opacity: 0; transform: translateY(12px) scale(.985); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
@@ -132,12 +165,62 @@ button {
   width: min(42vw, 268px);
 }
 
-.detail-14 {
-  width: min(88vw, 920px);
+.invitation-composition {
+  aspect-ratio: 815 / 764;
+  flex: 0 0 auto;
+  position: relative;
+  width: min(88vw, 815px);
 }
 
-.detail-16 {
-  width: min(88vw, 830px);
+.composition-layer {
+  display: block;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  position: absolute;
+}
+
+.composition-envelope {
+  left: 0;
+  top: 0;
+  width: auto;
+  z-index: 1;
+}
+
+.invitation-composition--closed .composition-envelope {
+  width: 70.92%;
+}
+
+.invitation-composition--open .composition-envelope {
+  width: 93.43%;
+}
+
+.composition-fountain {
+    left: 8.78%;
+    top: 70.81%;
+    width: 28.68%;
+    z-index: 2;
+}
+
+.composition-card {
+  left: 28.83%;
+  top: 53.64%;
+  width: 72.27%;
+  z-index: 3;
+}
+
+.composition-dog--top {
+  left: 67.48%;
+  top: 30.47%;
+  width: 26.13%;
+  z-index: 2;
+}
+
+.composition-dog--bottom {
+  left: 12.40%;
+    top: 87.99%;
+  width: 27.97%;
+  z-index: 4;
 }
 
 .calendar-button {
@@ -197,6 +280,16 @@ button {
   z-index: 0;
 }
 
+.detail--route-2::after {
+  background: url('assets/Ativo 11.svg') center / cover no-repeat;
+  content: '';
+  inset: 0;
+  opacity: .7;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
 .detail--route-2 .detail-inner {
   z-index: auto;
 }
@@ -209,11 +302,35 @@ button {
   z-index: 1;
 }
 
+.detail--route-2 .bottom-art {
+  animation: none !important;
+  opacity: 1;
+}
+
 .detail--route-2 .detail-4,
-.detail--route-2 .detail-16,
+.detail--route-2 .invitation-composition,
 .detail--route-2 .calendar-button {
   position: relative;
   z-index: 3;
+}
+
+.detail--route-2 .composition-fountain {
+  left: 11.78%;
+  top: 45.81%;
+  width: 22.68%;
+}
+
+.detail--route-2 .composition-card {
+  top: 33.64%;
+}
+
+.detail--route-2 .composition-dog--bottom {
+  top: 67.99%;
+}
+
+.detail--route-2 .composition-dog--top {
+  left: 57.48%;
+  top: 10.47%;
 }
 
 .detail--route-2 .detail-13-overlay {
@@ -237,9 +354,8 @@ button {
     gap: 32px;
   }
 
-  .detail-14,
-  .detail-16 {
-    max-height: 66svh;
+  .invitation-composition {
+    height: min(66svh, 764px);
     width: auto;
   }
 
@@ -286,12 +402,20 @@ button {
     transform: none;
   }
 
+  .detail--route-1::before {
+    background: url('assets/Ativo 11.svg') center / cover no-repeat;
+    display: block;
+    inset: 0;
+    transform: none;
+    z-index: 0;
+  }
+
   .detail--route-2 .bottom-art {
     display: flex;
   }
 
   .detail--route-2 .calendar-button {
-    transform: translateY(-80%);
+    transform: translateY(-130%) translateY(-5svh);
   }
 
   .detail-inner {
@@ -308,11 +432,7 @@ button {
     width: 28vw;
   }
 
-  .detail-14 {
-    width: 98vw;
-  }
-
-  .detail-16 {
+  .invitation-composition {
     width: 88vw;
   }
 
@@ -330,20 +450,22 @@ button {
   }
 
   .detail-inner--route-2>.detail-4,
-  .detail-inner--route-2>.detail-16,
+  .detail-inner--route-2>.invitation-composition,
   .detail-inner--route-2>.calendar-button {
     position: relative;
     z-index: 3;
   }
 
   .detail-inner--route-2 {
-    justify-content: flex-start;
-    padding-top: 10vh;
+    justify-content: center;
+    padding-top: 0;
+    transform: none;
   }
 
   .detail-12 {
     max-height: 36svh;
     object-fit: contain;
+    opacity: .78;
     width: 100%;
   }
 

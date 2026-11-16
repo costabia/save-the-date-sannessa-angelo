@@ -29,14 +29,31 @@ intro.addEventListener('touchend', (event) => {
   openDetail();
 }, { passive: false });
 
-function downloadCalendarEvent() {
+function addCalendarReminder() {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    window.location.href = 'evento.ics';
+    return;
+  }
+
   const ics = [
-    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Tauany e Gabriel//Save the Date//PT-BR',
-    'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', 'UID:tauany-gabriel-2027-11-20@save-the-date',
-    'DTSTAMP:20260101T120000Z', 'DTSTART;VALUE=DATE:20271120', 'DTEND;VALUE=DATE:20271121',
-    'SUMMARY:Casamento Tauany e Gabriel', 'LOCATION:Saint Jardim Eventos\\, Araçoiaba da Serra - SP',
-    'DESCRIPTION:Save the Date — Tauany e Gabriel', 'END:VEVENT', 'END:VCALENDAR',
-  ].join('\\r\\n');
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Tauany e Gabriel//Save the Date//PT-BR',
+    'CALSCALE:GREGORIAN',
+    'BEGIN:VEVENT',
+    'UID:tauany-gabriel-2027-11-20@save-the-date',
+    'DTSTAMP:20261115T120000Z',
+    'DTSTART;VALUE=DATE:20271120',
+    'DTEND;VALUE=DATE:20271121',
+    'SUMMARY:Casamento Tauany e Gabriel',
+    'LOCATION:Saint Jardim Eventos\\, Araçoiaba da Serra - SP',
+    'DESCRIPTION:Save the Date — Tauany e Gabriel',
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n');
+
   const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
@@ -48,4 +65,6 @@ function downloadCalendarEvent() {
   URL.revokeObjectURL(url);
 }
 
-document.querySelectorAll('.calendar-button').forEach((button) => button.addEventListener('click', downloadCalendarEvent));
+document.querySelectorAll('.calendar-button').forEach((button) => {
+  button.addEventListener('click', addCalendarReminder);
+});
