@@ -275,7 +275,7 @@ button {
 }
 
 .detail--route-2::before {
-  background: url('assets/background.png') center / cover no-repeat;
+  background: none;
   display: block;
   inset: 0;
   transform: none;
@@ -489,4 +489,55 @@ button {
 
 .detail--route-2 .bottom-art {
   display: flex;
+}
+
+.detail--route-2 .detail-13-overlay {
+  animation: none !important;
+  height: 100svh;
+  inset: 0;
+  max-height: none;
+  object-fit: cover;
+  opacity: .4;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+
+@media (min-width: 761px) {
+  #detail-route-2 .bottom-art {
+    width: 100vw;
+  }
+
+  #detail-route-2 .detail-12 {
+    display: none;
+  }
+
+  #detail-route-2 .calendar-button {
+    display: none;
+  }
+}
+
+#detail-route-2 .calendar-button {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  #detail-route-2 .detail-inner--route-2 {
+    gap: clamp(24px, 4vh, 40px);
+    justify-content: center;
+  }
+
+  #detail-route-2 .invitation-composition {
+    align-self: center;
+  }
+
+  #detail-route-2 .calendar-button {
+    bottom: auto;
+    display: block;
+    left: auto;
+    position: relative;
+    top: auto;
+    transform: none;
+    z-index: 5;
+  }
 }
