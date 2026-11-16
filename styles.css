@@ -541,6 +541,7 @@ button {
 
 #detail-route-2 .detail-4 {
   transform: translateY(-10vh);
+  animation: none !important;
 }
 
 #detail-route-2 .calendar-button {
