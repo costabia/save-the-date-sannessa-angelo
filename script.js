@@ -2,11 +2,13 @@ const intro = document.querySelector('#intro');
 const details = {
   'rota-1': document.querySelector('#detail-route-1'),
   'rota-2': document.querySelector('#detail-route-2'),
+  'rota-3': document.querySelector('#detail-route-3'),
 };
 let transitioning = false;
 
 function currentRoute() {
-  return location.hash.replace('#', '') === 'rota-2' ? 'rota-2' : 'rota-1';
+  const route = location.hash.replace('#', '');
+  return details[route] ? route : 'rota-1';
 }
 
 function openDetail() {

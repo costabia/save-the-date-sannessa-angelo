@@ -282,6 +282,10 @@ button {
   z-index: 0;
 }
 
+.detail--route-3::before {
+  background: url('assets/Ativo 13.svg') center / cover no-repeat;
+}
+
 .detail--route-2 .detail-inner {
   z-index: auto;
 }
