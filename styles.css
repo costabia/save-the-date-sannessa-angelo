@@ -306,6 +306,15 @@ button {
   z-index: 3;
 }
 
+.detail--route-2 .calendar-button {
+  left: 20%;
+  top: 17%;
+  display: block;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
 .detail--route-2 .composition-fountain {
   left: 11.78%;
   top: 45.81%;
@@ -411,7 +420,7 @@ button {
   }
 
   .detail--route-2 .calendar-button {
-    transform: translateY(-130%) translateY(-5svh);
+    transform: translate(-50%, -50%);
   }
 
   .detail-inner {
