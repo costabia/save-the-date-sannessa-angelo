@@ -516,6 +516,23 @@ button {
   #detail-route-2 .calendar-button {
     display: none;
   }
+
+  #detail-route-2 .detail-13-overlay {
+    max-width: none;
+    width: 100vw;
+  }
+
+  #detail-route-3 .calendar-button {
+    display: none;
+  }
+
+  #detail-route-2 .detail-inner {
+    transform: none;
+  }
+
+  #detail-route-2 .detail-4 {
+    transform: none;
+  }
 }
 
 #detail-route-2 .calendar-button {

@@ -11,6 +11,13 @@ function currentRoute() {
   return details[route] ? route : 'rota-1';
 }
 
+function activateRouteFromHash() {
+  intro.classList.add('screen--active');
+  Object.values(details).forEach((detail) => {
+    detail.classList.remove('screen--active', 'is-entering', 'is-exiting');
+  });
+}
+
 function openDetail() {
   if (transitioning) return;
   transitioning = true;
@@ -30,6 +37,9 @@ intro.addEventListener('touchend', (event) => {
   event.preventDefault();
   openDetail();
 }, { passive: false });
+
+activateRouteFromHash();
+window.addEventListener('hashchange', () => window.location.reload());
 
 function addCalendarReminder() {
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
