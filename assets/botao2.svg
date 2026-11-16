@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.52 77.6">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-6 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        letter-spacing: -.19em;
+      }
+
+      .cls-8 {
+        fill: #fff;
+        font-family: Cinzel-Regular, Cinzel;
+        font-size: 25.18px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-9 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.2em;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <text class="cls-8" transform="translate(39.9 48.82)"><tspan class="cls-9" x="0" y="0">SA</tspan><tspan class="cls-10" x="25.46" y="0">L</tspan><tspan class="cls-7" x="34.67" y="0">V</tspan><tspan class="cls-9" x="48.45" y="0">AR </tspan><tspan class="cls-2" x="83.07" y="0">N</tspan><tspan class="cls-3" x="101.65" y="0">A </tspan><tspan class="cls-5" x="121.45" y="0">A</tspan><tspan class="cls-1" x="136.28" y="0">G</tspan><tspan class="cls-4" x="153.53" y="0">EN</tspan><tspan class="cls-5" x="184.3" y="0">D</tspan><tspan class="cls-9" x="201.52" y="0">A</tspan></text>
+      <path class="cls-6" d="M43.8.5h221.92c18.38,0,33.3,14.92,33.3,33.3v10c0,18.38-14.92,33.3-33.3,33.3H33.8C15.42,77.1.5,62.18.5,43.8H.5C.5,19.9,19.9.5,43.8.5Z"/>
+    </g>
+  </g>
+</svg>
