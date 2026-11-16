@@ -544,12 +544,12 @@ button {
   animation: none !important;
 }
 
-#detail-route-1 .detail-4 {
-  animation: none !important;
-}
-
 #detail-route-2 .calendar-button {
   display: none !important;
+}
+
+#detail-route-1 .detail-4 {
+  animation: none !important;
 }
 
 @media (max-width: 760px) {
