@@ -276,6 +276,7 @@ button {
 
 .detail--route-2::before {
   background: url('assets/background.png') center / cover no-repeat;
+  display: block;
   inset: 0;
   transform: none;
   z-index: 0;
@@ -391,6 +392,10 @@ button {
     display: none;
     inset: 0;
     transform: none;
+  }
+
+  .detail--route-2::before {
+    display: block;
   }
 
   .detail--route-1::before {
