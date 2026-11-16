@@ -526,6 +526,10 @@ button {
   transform: translateY(-10vh);
 }
 
+#detail-route-2 .calendar-button {
+  display: none !important;
+}
+
 @media (max-width: 760px) {
   #detail-route-2 .detail-inner--route-2 {
     gap: clamp(24px, 4vh, 40px);
