@@ -325,6 +325,11 @@ button {
   width: 22.68%;
 }
 
+.detail--route-1 .composition-envelope,
+.detail--route-3 .composition-envelope {
+  left: -8%;
+}
+
 .detail--route-2 .composition-card {
   top: 33.64%;
 }
