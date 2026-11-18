@@ -1,574 +1,539 @@
 :root {
-  --white: #fff;
+    --paper: #f6f0e5;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  background: #fff;
-  margin: 0;
-  overflow: hidden;
+    margin: 0;
+    overflow: hidden;
+    background: var(--paper);
 }
 
 button {
-  font: inherit;
+    font: inherit;
 }
 
 .app {
-  background: #fff;
-  height: 100svh;
-  isolation: isolate;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+    height: 100svh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
 }
 
 .screen {
-  background: #fff;
-  display: flex;
-  height: 100%;
-  inset: 0;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  transform: translateY(22px);
-  transition: opacity .55s ease, transform .65s cubic-bezier(.2, .8, .2, 1);
-}
-
-.intro {
-  background: #fff url('assets/Ativo 13.svg') center / cover no-repeat;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(18px);
+    transition: opacity .52s ease, transform .62s cubic-bezier(.2, .8, .2, 1);
+    overflow: hidden;
 }
 
 .screen--active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
 }
 
 .screen.is-exiting {
-  opacity: 0;
-  transform: scale(1.04);
+    opacity: 0;
+    transform: scale(1.035);
 }
 
-.intro.is-exiting .intro-assets .asset {
-  animation: asset-out .42s ease forwards;
+.intro {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.intro.is-exiting .intro-assets .asset:nth-child(1) { animation-delay: 0s; }
-.intro.is-exiting .intro-assets .asset:nth-child(2) { animation-delay: .06s; }
-.intro.is-exiting .intro-assets .asset:nth-child(3) { animation-delay: .12s; }
-.intro.is-exiting .intro-assets .asset:nth-child(4) { animation-delay: .18s; }
-
-.detail.is-entering .detail-inner > * {
-  animation: asset-in .72s cubic-bezier(.2, .8, .2, 1) both;
+.intro--route-1 {
+    background-image: url('assets/capa_op1-hd.png');
 }
 
-.detail.is-entering .detail-inner > *:nth-child(1) { animation-delay: .16s; }
-.detail.is-entering .detail-inner > *:nth-child(2) { animation-delay: .28s; }
-.detail.is-entering .detail-inner > *:nth-child(3) { animation-delay: .4s; }
-.detail.is-entering .detail-inner > *:nth-child(4) { animation-delay: .52s; }
-
-.detail.is-entering .invitation-composition .composition-layer {
-  animation: composition-layer-in .72s cubic-bezier(.2, .8, .2, 1) both;
+.intro--route-2 {
+    background-image: url('assets/capa_op2@2x.png');
 }
 
-.detail.is-entering .detail-inner > .invitation-composition {
-  animation-delay: 0s;
+.intro--route-2 .open-prompt {
+    bottom: 6.5%;
+    display: block;
+    z-index: 20;
 }
 
-.detail.is-entering .invitation-composition .composition-envelope {
-  animation-delay: .16s;
+.intro--route-1 .cover-lockup,
+.intro--route-1 .cover-envelope {
+    display: none;
 }
 
-.detail.is-entering .invitation-composition .composition-fountain {
-  animation-delay: .24s;
+.open-prompt-picture {
+    position: absolute;
+    left: 50%;
+    bottom: 6.5%;
+    transform: translateX(-50%);
 }
 
-.detail.is-entering .invitation-composition .composition-dog--top {
-  animation-delay: .46s;
+.open-prompt-picture .open-prompt {
+    position: static;
+    transform: none;
 }
 
-.detail.is-entering .invitation-composition .composition-dog--bottom {
-  animation-delay: .54s;
+.screen-hit-area {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    color: inherit;
 }
 
-.detail.is-entering .invitation-composition .composition-card {
-  animation-delay: .74s;
+.intro-names,
+.open-prompt,
+.cover-lockup,
+.cover-envelope {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-@keyframes asset-out {
-  from { opacity: 1; transform: translateY(0) scale(1); }
-  to { opacity: 0; transform: translateY(-12px) scale(.96); }
+.intro-names {
+    bottom: 13.3%;
+    width: min(62vw, 340px);
 }
 
-@keyframes asset-in {
-  from { opacity: 0; transform: translateY(20px) scale(.97); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+.open-prompt {
+    bottom: 6.5%;
+    width: min(42vw, 230px);
 }
 
-@keyframes composition-layer-in {
-  from { opacity: 0; transform: translateY(12px) scale(.985); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+.cover-lockup {
+    top: 7.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
-.intro-assets,
-.detail-inner {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.monogram {
+    width: clamp(38px, 10vw, 96px);
+    height: auto;
 }
 
-.intro-assets {
-  gap: clamp(42px, 7.5vh, 86px);
-  max-height: 92svh;
-  width: min(72vw, 560px);
+.save-the-date {
+    width: clamp(16px, 29vw, 262px);
+    height: auto;
+    margin-top: 20px;
 }
 
-.asset {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.asset-3 {
-  width: min(46.8vw, 424px);
-}
-
-.asset-4,
-.asset-5 {
-  width: min(25.2vw, 161px);
-}
-
-.asset-1 {
-  width: min(43.2vw, 347px);
-}
-
-.detail-inner {
-  gap: clamp(24px, 4.5vh, 58px);
-  max-height: 96svh;
-  position: relative;
-  width: min(92vw, 950px);
-  z-index: 1;
-}
-
-.detail-4 {
-  width: min(42vw, 268px);
-}
-
-.invitation-composition {
-  aspect-ratio: 815 / 764;
-  flex: 0 0 auto;
-  position: relative;
-  width: min(88vw, 815px);
-}
-
-.composition-layer {
-  display: block;
-  height: auto;
-  max-width: none;
-  object-fit: contain;
-  position: absolute;
-}
-
-.composition-envelope {
-  left: 0;
-  top: 0;
-  width: auto;
-  z-index: 1;
-}
-
-.invitation-composition--closed .composition-envelope {
-  width: 70.92%;
-}
-
-.invitation-composition--open .composition-envelope {
-  width: 93.43%;
-}
-
-.composition-fountain {
-    left: 8.78%;
-    top: 70.81%;
-    width: 28.68%;
-    z-index: 2;
-}
-
-.composition-card {
-  left: 28.83%;
-  top: 53.64%;
-  width: 72.27%;
-  z-index: 3;
-}
-
-.composition-dog--top {
-  left: 67.48%;
-  top: 30.47%;
-  width: 26.13%;
-  z-index: 2;
-}
-
-.composition-dog--bottom {
-  left: 12.40%;
-    top: 87.99%;
-  width: 27.97%;
-  z-index: 4;
-}
-
-.calendar-button {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  display: none;
-  padding: 0;
-}
-
-.calendar-button img {
-  display: block;
-  width: min(32vw, 168px);
-}
-
-.bottom-art {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: min(88vw, 960px);
-}
-
-.detail-12 {
-  width: 100%;
-}
-
-.detail-13-overlay {
-  height: 100%;
-  inset: 0;
-  object-fit: contain;
-  opacity: .4;
-  position: absolute;
-  width: 100%;
+.cover-envelope {
+    top: 36%;
+    width: min(51vw, 300px);
+    filter: drop-shadow(0 18px 22px rgba(87, 65, 36, .15));
 }
 
 .detail {
-  overflow: hidden;
+    align-items: center;
 }
 
-.detail::before {
-  background: url('assets/Ativo 13.svg') center / cover no-repeat;
-  content: '';
-  display: block;
-  inset: -10%;
-  position: absolute;
-  transform: scale(1.08);
+.detail--route-1 {
+    background: url('assets/fundo_op1.png') center / cover no-repeat;
 }
 
 .detail--route-2 {
-  overflow: hidden;
+    background: url('assets/fundoop2@2x.png') center / cover no-repeat;
 }
 
-.detail--route-2::before {
-  background: none;
-  display: block;
-  inset: 0;
-  transform: none;
-  z-index: 0;
-}
-
-.detail--route-3::before {
-  background: url('assets/Ativo 13.svg') center / cover no-repeat;
-}
-
-.detail--route-2 .detail-inner {
-  z-index: auto;
-}
-
-.detail--route-2 .bottom-art {
-  bottom: 0;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.detail--route-2 .bottom-art {
-  animation: none !important;
-  opacity: 1;
-}
-
-.detail--route-2 .detail-4,
-.detail--route-2 .invitation-composition,
-.detail--route-2 .calendar-button {
-  position: relative;
-  z-index: 3;
-}
-
-.detail--route-2 .calendar-button {
-  left: 20%;
-  top: 10%;
-  display: block;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-}
-
-.detail--route-2 .composition-fountain {
-  left: 11.78%;
-  top: 45.81%;
-  width: 22.68%;
-}
-
-.detail--route-1 .composition-envelope,
-.detail--route-3 .composition-envelope {
-  left: -8%;
-}
-
-.detail--route-2 .composition-card {
-  top: 33.64%;
-}
-
-.detail--route-2 .composition-dog--bottom {
-  top: 67.99%;
-}
-
-.detail--route-2 .composition-dog--top {
-  left: 57.48%;
-  top: 10.47%;
-}
-
-.detail--route-2 .detail-13-overlay {
-  display: block;
-}
-
-.detail-inner--route-2 {
-  gap: clamp(20px, 3.2vh, 40px);
-}
-
-@media (min-width: 761px) {
-  .intro-assets {
-    gap: 64px;
-  }
-
-  .detail-4 {
-    width: min(21vw, 134px);
-  }
-
-  .detail-inner {
-    gap: 32px;
-  }
-
-  .invitation-composition {
-    height: min(66svh, 764px);
-    width: auto;
-  }
-
-  .detail-12 {
-    max-height: 34svh;
-    width: auto;
-  }
-
-  .bottom-art {
-    width: 62vw;
-  }
-
-  .detail--route-2 .detail-inner {
-    transform: scale(1.08);
-  }
-
-  .detail--route-2 .bottom-art {
-    display: none;
-  }
-}
-
-@media (max-width: 760px) {
-  .intro-assets {
-    gap: clamp(42px, 7.5vh, 72px);
-    width: 72vw;
-  }
-
-  .asset-3 {
-    width: 76vw;
-  }
-
-  .asset-1 {
-    width: 50vw;
-  }
-
-  .asset-4,
-  .asset-5 {
-    width: 28vw;
-  }
-
-  .detail::before {
-    display: none;
-    inset: 0;
-    transform: none;
-  }
-
-  .detail--route-2::before {
-    display: block;
-  }
-
-  .detail--route-1::before {
-    background: url('assets/Ativo 11.svg') center / cover no-repeat;
-    display: block;
-    inset: 0;
-    transform: none;
-    z-index: 0;
-  }
-
-  .detail--route-2 .bottom-art {
+.detail-inner {
+    width: min(100%, 760px);
+    height: 100%;
     display: flex;
-  }
+    flex-direction: column;
+    align-items: center;
+    padding: 5.2svh 0 2svh;
+}
 
-  .detail--route-2 .calendar-button {
-    transform: translate(-50%, -50%);
-  }
-
-  .detail-inner {
-        gap: 80px;
-        max-height: 995svh;
-        width: 92vw;
-  }
-
-  .detail--route-1 .detail-inner {
-    transform: translateY(-3vh);
-  }
-
-  .detail-4 {
-    width: 28vw;
-  }
-
-  .invitation-composition {
-    width: 88vw;
-  }
-
-  .calendar-button {
-    display: block;
-  }
-
-  .bottom-art {
-    bottom: max(0px, env(safe-area-inset-bottom));
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 100vw;
-    z-index: 1;
-  }
-
-  .detail-inner--route-2>.detail-4,
-  .detail-inner--route-2>.invitation-composition,
-  .detail-inner--route-2>.calendar-button {
+.brand-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     position: relative;
-    z-index: 3;
-  }
+    z-index: 5;
+}
 
-  .detail-inner--route-2 {
-    justify-content: center;
-    padding-top: 0;
-    transform: none;
-  }
+.composition {
+    position: relative;
+    width: min(92vw, 660px);
+    aspect-ratio: 1 / 1.24;
+    margin-top: clamp(1rem, 3vh, 2rem);
+}
 
-  .detail-12 {
-    max-height: 36svh;
+.piece {
+    position: absolute;
+    display: block;
+    height: auto;
+    max-width: none;
     object-fit: contain;
-    width: 100%;
-  }
-
-  .detail-13-overlay {
-    max-height: 36svh;
-  }
 }
 
-
-.detail--route-2 .bottom-art {
-  display: flex;
+.envelope {
+    z-index: 1;
+    filter: drop-shadow(0 16px 18px rgba(70, 49, 24, .14));
 }
 
-.detail--route-2 .detail-13-overlay {
-  animation: none !important;
-  height: 100svh;
-  inset: 0;
-  max-height: none;
-  object-fit: cover;
-  opacity: .4;
-  position: fixed;
-  width: 100vw;
-  z-index: 2;
+.invitation {
+    z-index: 4;
+    filter: drop-shadow(0 15px 14px rgba(70, 49, 24, .18));
+}
+
+.composition--route-1 .envelope {
+    width: 95%;
+    top: -13%;
+}
+
+.composition--route-1 .invitation {
+    width: 75%;
+    left: 21.6%;
+    top: 55.8%;
+}
+
+.composition--route-1 .piece-flower {
+    z-index: 2;
+    opacity: .94;
+}
+
+.flower-one {
+    width: 42%;
+    left: 47.7%;
+    top: 34.2%;
+    transform: rotate(11deg);
+}
+
+.flower-two {
+    width: 42%;
+    left: -0.9%;
+    top: 60.3%;
+    transform: rotate(-15deg);
+}
+
+.composition--route-2 {
+    aspect-ratio: 1 / 1.3;
+    margin-top: clamp(.7rem, 2vh, 1.4rem);
+}
+
+.composition--route-2 .envelope {
+    width: 95%;
+    left: 0%;
+    top: -13%;
+    z-index: 1;
+}
+
+.composition--route-2 .invitation {
+    width: 75%;
+    left: 21.6%;
+    top: 55.8%;
+    transform: rotate(5deg);
+    z-index: 3;
+}
+
+.composition--route-2 .piece:not(.envelope):not(.invitation) {
+    z-index: 2;
+}
+
+.outline-flower {
+    width: 29%;
+    left: 68%;
+    top: 44%;
+    transform: rotate(9deg);
+}
+
+.piece-key {
+    width: 28%;
+    left: 53%;
+    top: 40%;
+    transform: rotate(8deg);
+}
+
+.piece-glasses {
+    width: 29%;
+    left: 3%;
+    top: 45%;
+    transform: rotate(-9deg);
+}
+
+.piece-wax {
+    width: 23%;
+    left: 10%;
+    top: 49%;
+    transform: rotate(-18deg);
+    z-index: 10 !important;
+}
+
+.piece-lock {
+    width: 19%;
+    left: 8%;
+    top: 62%;
+    transform: rotate(-9deg);
+}
+
+.calendar-button--route-2 {
+    position: absolute;
+    bottom: 4.5%;
+    left: 50%;
+    z-index: 10;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.calendar-button--route-2 img {
+    display: block;
+    width: min(48vw, 240px);
+    height: auto;
+}
+
+.detail.is-entering .brand-lockup {
+    animation: rise-in .72s both cubic-bezier(.2, .8, .2, 1);
+}
+
+.detail.is-entering .composition .piece {
+    animation: float-in .72s both cubic-bezier(.2, .8, .2, 1);
+}
+
+.detail.is-entering .composition .piece:nth-child(1) {
+    animation-delay: .12s;
+}
+
+.detail.is-entering .composition .piece:nth-child(2) {
+    animation-delay: .18s;
+}
+
+.detail.is-entering .composition .piece:nth-child(3) {
+    animation-delay: .24s;
+}
+
+.detail.is-entering .composition .piece:nth-child(4) {
+    animation-delay: .3s;
+}
+
+.detail.is-entering .composition .piece:nth-child(5) {
+    animation-delay: .36s;
+}
+
+.detail.is-entering .composition .piece:nth-child(6) {
+    animation-delay: .42s;
+}
+
+.detail.is-entering .composition .piece:nth-child(7) {
+    animation-delay: .5s;
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-in {
+    from {
+        opacity: 0;
+        translate: 0 16px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
 }
 
 @media (min-width: 761px) {
-  #detail-route-2 .bottom-art {
-    width: 100vw;
-  }
+    .intro--route-1 {
+        background-image: url('assets/fundoop2@2x.png');
+    }
 
-  #detail-route-2 .detail-12 {
-    display: none;
-  }
+    .intro--route-2 {
+        background-image: url('assets/fundoop2@2x.png');
+    }
 
-  #detail-route-2 .calendar-button {
-    display: none;
-  }
+    .intro--route-1 .intro-names {
+        display: none;
+    }
 
-  #detail-route-2 .detail-13-overlay {
-    max-width: none;
-    width: 100vw;
-  }
+    .intro--route-1 .cover-lockup {
+        display: flex;
+        z-index: 5;
+    }
 
-  #detail-route-3 .calendar-button {
-    display: none;
-  }
+    .intro--route-1 .cover-envelope {
+        display: block;
+        z-index: 4;
+    }
 
-  #detail-route-2 .detail-inner {
-    transform: none;
-  }
+    .intro--route-2 .cover-lockup {
+        display: flex;
+        z-index: 5;
+    }
 
-  #detail-route-2 .detail-4 {
-    transform: none;
-  }
+    .intro--route-2 .cover-envelope {
+        display: block;
+        z-index: 4;
+    }
+
+    .intro-names {
+        width: 300px;
+    }
+
+    .open-prompt {
+        width: 205px;
+    }
+
+    .cover-envelope {
+        width: 270px;
+    }
+
+    .detail-inner {
+        padding-top: 4vh;
+    }
+
+    .composition {
+        width: min(720px, 62vw, calc((100svh - 180px) / 1.3));
+        flex: 0 0 auto;
+    }
+
+    .detail .brand-lockup .monogram {
+        width: clamp(32px, 8vw, 72px);
+    }
+
+    .detail .brand-lockup .save-the-date {
+        width: clamp(14px, 23vw, 210px);
+    }
+
+    .detail--route-1 .composition,
+    .detail--route-2 .composition {
+        transform: translateY(-20%);
+    }
+
+    .composition--route-2 .envelope {
+        width: 62%;
+        left: 13%;
+        top: 12%;
+    }
+
+    .composition--route-2 .invitation {
+        width: 58%;
+        left: 37%;
+        top: 27%;
+    }
+
+    .detail--route-2 .outline-flower {
+        left: 58%;
+        top: 4%;
+    }
+
+    .detail--route-2 .piece-key {
+        left: 63%;
+        top: 9%;
+    }
+
+    .detail--route-2 .piece-glasses {
+        left: 3%;
+        top: 25%;
+    }
+
+    .detail--route-2 .piece-wax {
+        left: 10%;
+        top: 49%;
+    }
+
+    .detail--route-2 .piece-lock {
+        left: 3%;
+        top: 62%;
+    }
+
+    .calendar-button--route-2 {
+        display: none;
+    }
+
+    .detail--route-2 .invitation {
+        top: 57%;
+    }
+
+    .detail--route-2 .piece-key {
+        left: 33%;
+        top: 46%;
+    }
+
+    .detail--route-2 .outline-flower {
+        top: 45%;
+    }
+
+    .detail--route-2 .piece-lock {
+        left: 23%;
+    }
+
+    .detail--route-2 .piece-glasses {
+        left: 10%;
+        top: 65%;
+    }
 }
 
-#detail-route-2 .calendar-button {
-  display: none;
+@media (max-width: 480px) {
+    .intro-names {
+        bottom: 12%;
+        width: 68vw;
+    }
+
+    .open-prompt {
+        bottom: 5%;
+        width: 27vw;
+    }
+
+    .cover-lockup {
+        top: 6%;
+    }
+
+    .cover-envelope {
+        top: 30%;
+        width: 67vw;
+    }
+
+    .detail-inner {
+        padding-top: 4.2svh;
+    }
+
+    .composition {
+        width: 98vw;
+        margin-top: 2vh;
+    }
 }
 
-#detail-route-2 .detail-4 {
-  transform: translateY(-10vh);
-  animation: none !important;
-}
+@media (prefers-reduced-motion: reduce) {
 
-#detail-route-2 .calendar-button {
-  display: none !important;
-}
-
-#detail-route-1 .detail-4 {
-  animation: none !important;
-}
-
-@media (max-width: 760px) {
-  #detail-route-2 .detail-inner--route-2 {
-    gap: clamp(24px, 4vh, 40px);
-    justify-content: center;
-  }
-
-  #detail-route-2 .invitation-composition {
-    align-self: center;
-  }
-
-  #detail-route-2 .calendar-button {
-    bottom: auto;
-    display: block;
-    left: auto;
-    position: relative;
-    top: auto;
-    transform: none;
-    z-index: 5;
-  }
+    .screen,
+    .detail.is-entering .brand-lockup,
+    .detail.is-entering .composition .piece {
+        animation: none;
+        transition: none;
+    }
 }

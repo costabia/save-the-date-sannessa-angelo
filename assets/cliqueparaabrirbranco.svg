@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227.24 28.23">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        fill: #ece5d5;
+        font-family: Cinzel-Regular, Cinzel;
+        font-size: 23.11px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-7 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.03em;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <text class="cls-6" transform="translate(0 19.64)"><tspan x="0" y="0">C</tspan><tspan class="cls-1" x="17.56" y="0">L</tspan><tspan class="cls-2" x="30.2" y="0">I</tspan><tspan class="cls-1" x="37.55" y="0">Q</tspan><tspan class="cls-3" x="56.54" y="0">U</tspan><tspan x="74.38" y="0">E </tspan><tspan class="cls-7" x="93.49" y="0">P</tspan><tspan class="cls-5" x="105.2" y="0">A</tspan><tspan class="cls-8" x="121.65" y="0">R</tspan><tspan class="cls-5" x="136.6" y="0">A A</tspan><tspan class="cls-4" x="175.28" y="0">B</tspan><tspan class="cls-8" x="188.59" y="0">R</tspan><tspan x="203.54" y="0">IR</tspan></text>
+  </g>
+</svg>

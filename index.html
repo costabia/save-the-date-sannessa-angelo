@@ -3,86 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Tauany e Gabriel</title>
-    <meta name="description" content="Save the Date — Tauany e Gabriel" />
+    <meta name="theme-color" content="#f6f0e5" />
+    <title>Save the Date</title>
+    <meta name="description" content="Save the Date" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tauany-gabriel-save-the-date-20-11.vercel.app/" />
-    <meta property="og:title" content="Tauany e Gabriel — Save the Date" />
-    <meta property="og:description" content="Save the Date — Tauany e Gabriel" />
-    <meta property="og:image" content="https://tauany-gabriel-save-the-date-20-11.vercel.app/assets/capa_opcao1.jpg" />
-    <meta property="og:image:url" content="https://tauany-gabriel-save-the-date-20-11.vercel.app/assets/capa_opcao1.jpg" />
-    <meta property="og:image:secure_url" content="https://tauany-gabriel-save-the-date-20-11.vercel.app/assets/capa_opcao1.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1920" />
-    <meta property="og:image:height" content="1080" />
-    <meta property="og:image:alt" content="Save the Date de Tauany e Gabriel" />
+    <meta property="og:title" content="Save the Date" />
+    <meta property="og:description" content="Save the Date" />
+    <meta property="og:image" content="assets/capa@2x.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="3841" />
+    <meta property="og:image:height" content="2161" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tauany e Gabriel — Save the Date" />
-    <meta name="twitter:description" content="Save the Date — Tauany e Gabriel" />
-    <meta name="twitter:image" content="https://tauany-gabriel-save-the-date-20-11.vercel.app/assets/capa_opcao1.jpg" />
-    <meta name="image" content="https://tauany-gabriel-save-the-date-20-11.vercel.app/assets/capa_opcao1.jpg" />
-    <link rel="canonical" href="https://tauany-gabriel-save-the-date-20-11.vercel.app/" />
-    <link rel="image_src" href="https://tauany-gabriel-save-the-date-20-11.vercel.app/assets/capa_opcao1.jpg" />
+    <meta name="twitter:title" content="Save the Date" />
+    <meta name="twitter:description" content="Save the Date" />
+    <meta name="twitter:image" content="assets/capa@2x.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app" id="app">
-      <section class="screen intro screen--active" id="intro" aria-label="Abertura do convite">
-        <div class="intro-assets">
-          <img src="assets/Ativo 3.svg" alt="" class="asset asset-3" />
-          <img src="assets/Ativo 4.svg" alt="Tauany e Gabriel" class="asset asset-4" />
-          <img src="assets/Ativo 1.svg" alt="" class="asset asset-1" />
-          <img src="assets/Ativo 5.svg" alt="" class="asset asset-5" />
-        </div>
+      <section class="screen intro intro--route-1" id="intro-route-1" aria-label="Capa da primeira opção">
+        <button class="screen-hit-area" type="button" aria-label="Abrir convite">
+          <img src="assets/nomes.svg" alt="Nomes dos noivos" class="intro-names" />
+          <div class="cover-lockup cover-lockup--route-1">
+            <picture>
+              <source media="(min-width: 761px)" srcset="assets/monogramaverde.svg" />
+              <img src="assets/monograma.svg" alt="Monograma" class="monogram" />
+            </picture>
+            <picture>
+              <source media="(min-width: 761px)" srcset="assets/savethedateverde.svg" />
+              <img src="assets/savethedate.svg" alt="Save the Date" class="save-the-date" />
+            </picture>
+          </div>
+          <img src="assets/envelopefechado.png" alt="Envelope fechado" class="cover-envelope cover-envelope--route-1" />
+          <img src="assets/cliqueparaabrir.svg" alt="Clique para abrir" class="open-prompt" />
+        </button>
       </section>
 
-      <section class="screen detail detail--route-1" id="detail-route-1" aria-label="Convite aberto">
+      <section class="screen detail detail--route-1" id="detail-route-1" aria-label="Convite da primeira opção">
         <div class="detail-inner">
-          <img src="assets/Ativo 4.svg" alt="Tauany e Gabriel" class="asset detail-4" />
-          <div class="invitation-composition invitation-composition--open" aria-label="Convite aberto com envelope, fonte e cachorros">
-            <img src="assets/envelope abeerto.png" alt="" class="composition-layer composition-envelope" />
-            <img src="assets/fontee.png" alt="" class="composition-layer composition-fountain" />
-            <img src="assets/Ativo 6 HD.png" alt="Convite de Tauany e Gabriel" class="composition-layer composition-card" />
-            <img src="assets/Ativo 9.svg" alt="" class="composition-layer composition-dog composition-dog--top" />
-            <img src="assets/Ativo 8.svg" alt="" class="composition-layer composition-dog composition-dog--bottom" />
+          <header class="brand-lockup">
+            <img src="assets/monograma.svg" alt="Monograma" class="monogram" />
+            <img src="assets/savethedate.svg" alt="Save the Date" class="save-the-date" />
+          </header>
+          <div class="composition composition--route-1" aria-label="Envelope e convite">
+            <img src="assets/flor1@2x.png" alt="" class="piece piece-flower flower-one" />
+            <img src="assets/flor2@2x.png" alt="" class="piece piece-flower flower-two" />
+            <img src="assets/envelopefechado.png" alt="Envelope fechado" class="piece envelope" />
+            <img src="assets/convite@2x.png" alt="Convite" class="piece invitation" />
           </div>
-          <button class="calendar-button" type="button" aria-label="Criar evento na agenda">
-            <img src="assets/Ativo 15.png" alt="Criar evento na agenda" />
-          </button>
         </div>
       </section>
 
-      <section class="screen detail detail--route-2" id="detail-route-2" aria-label="Detalhes do convite">
-        <div class="detail-inner detail-inner--route-2">
-          <img src="assets/Ativo 4.svg" alt="Tauany e Gabriel" class="asset detail-4" />
-          <div class="invitation-composition invitation-composition--closed" aria-label="Convite fechado com envelope, fonte e cachorros">
-            <img src="assets/Ativo 1.svg" alt="" class="composition-layer composition-envelope" />
-            <img src="assets/fontee.png" alt="" class="composition-layer composition-fountain" />
-            <img src="assets/Ativo 6 HD.png" alt="Convite de Tauany e Gabriel" class="composition-layer composition-card" />
-            <img src="assets/Ativo 9.svg" alt="" class="composition-layer composition-dog composition-dog--top" />
-            <img src="assets/Ativo 8.svg" alt="" class="composition-layer composition-dog composition-dog--bottom" />
+      <section class="screen intro intro--route-2" id="intro-route-2" aria-label="Capa da segunda opção">
+        <button class="screen-hit-area" type="button" aria-label="Abrir convite">
+          <div class="cover-lockup">
+            <picture>
+              <source media="(min-width: 761px)" srcset="assets/monogramaverde.svg" />
+              <img src="assets/monograma.svg" alt="Monograma" class="monogram" />
+            </picture>
+            <picture>
+              <source media="(min-width: 761px)" srcset="assets/savethedateverde.svg" />
+              <img src="assets/savethedate.svg" alt="Save the Date" class="save-the-date" />
+            </picture>
           </div>
-          <button class="calendar-button" type="button" aria-label="Criar evento na agenda">
-            <img src="assets/botao2.svg" alt="Salvar na agenda" />
-          </button>
-          <div class="bottom-art" aria-label="Ilustração do local">
-            <img src="assets/Ativo 12.svg" alt="Jardim e fonte" class="asset detail-12" />
-          </div>
-          <img src="assets/Ativo 13.svg" alt="" class="asset detail-13-overlay" />
-        </div>
+          <img src="assets/envelopefechado.png" alt="Envelope fechado" class="cover-envelope" />
+          <picture class="open-prompt-picture">
+            <source media="(min-width: 761px)" srcset="assets/cliqueparaabrir.svg" />
+            <img src="assets/cliqueparaabrirbranco.svg" alt="Clique para abrir" class="open-prompt" />
+          </picture>
+        </button>
       </section>
 
-      <section class="screen detail detail--route-2 detail--route-3" id="detail-route-3" aria-label="Detalhes alternativos do convite">
-        <div class="detail-inner detail-inner--route-2">
-          <img src="assets/Ativo 4.svg" alt="Tauany e Gabriel" class="asset detail-4" />
-          <div class="invitation-composition invitation-composition--closed" aria-label="Convite fechado com envelope estampado e fonte">
-            <img src="assets/envelopecomestampa.svg" alt="" class="composition-layer composition-envelope" />
-            <img src="assets/fontee.png" alt="" class="composition-layer composition-fountain" />
-            <img src="assets/Ativo 6 HD.png" alt="Convite de Tauany e Gabriel" class="composition-layer composition-card" />
+      <section class="screen detail detail--route-2" id="detail-route-2" aria-label="Convite da segunda opção">
+        <div class="detail-inner">
+          <header class="brand-lockup brand-lockup--green">
+            <img src="assets/monogramaverde.svg" alt="Monograma" class="monogram" />
+            <img src="assets/savethedateverde.svg" alt="Save the Date" class="save-the-date" />
+          </header>
+          <div class="composition composition--route-2" aria-label="Envelope aberto e convite">
+            <img src="assets/floroutline@2x.png" alt="" class="piece piece-flower outline-flower" />
+            <img src="assets/chave@2x.png" alt="" class="piece piece-key" />
+            <img src="assets/taças@2x.png" alt="" class="piece piece-glasses" />
+            <img src="assets/cera@2x.png" alt="" class="piece piece-wax" />
+            <img src="assets/fechadura@2x.png" alt="" class="piece piece-lock" />
+            <img src="assets/envelopeaberto@2x.png" alt="Envelope aberto" class="piece envelope" />
+            <img src="assets/convite-opcao2@2x.png" alt="Convite" class="piece invitation" />
           </div>
-          <button class="calendar-button" type="button" aria-label="Criar evento na agenda">
-            <img src="assets/botao2.svg" alt="Salvar na agenda" />
+          <button class="calendar-button calendar-button--route-2" type="button" aria-label="Salvar na agenda">
+            <img src="assets/salvarnagenda.svg" alt="Salvar na agenda" />
           </button>
         </div>
       </section>
