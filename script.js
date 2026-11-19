@@ -42,9 +42,12 @@ function addCalendarReminder() {
     'VERSION:2.0',
     'PRODID:-//Sannessa e Angelo//Save the Date//PT-BR',
     'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
     'BEGIN:VEVENT',
     'UID:sannessa-angelo-2027-08-16@save-the-date',
     'DTSTAMP:20261118T120000Z',
+    'STATUS:CONFIRMED',
+    'SEQUENCE:0',
     'DTSTART;VALUE=DATE:20270816',
     'DTEND;VALUE=DATE:20270817',
     'SUMMARY:Casamento Sannessa e Angelo',
@@ -52,9 +55,22 @@ function addCalendarReminder() {
     'DESCRIPTION:Save the Date — Sannessa e Angelo',
     'END:VEVENT',
     'END:VCALENDAR',
-  ].join('\\r\\n');
+  ].join('\r\n');
 
   const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  const file = typeof File === 'function'
+    ? new File([blob], 'sannessa-e-angelo.ics', { type: 'text/calendar;charset=utf-8' })
+    : null;
+
+  if (file && typeof navigator.share === 'function' && typeof navigator.canShare === 'function' && navigator.canShare({ files: [file] })) {
+    navigator.share({
+      files: [file],
+      title: 'Casamento Sannessa e Angelo',
+      text: 'Adicionar o casamento à agenda',
+    }).catch(() => {});
+    return;
+  }
+
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;

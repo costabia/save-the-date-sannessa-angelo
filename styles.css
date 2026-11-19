@@ -200,12 +200,13 @@ button {
 }
 
 .composition--route-1 .envelope {
-    width: 95%;
+    width: 105%;
     top: -13%;
+    left: -13%;
 }
 
 .composition--route-1 .invitation {
-    width: 75%;
+    width: 83%;
     left: 21.6%;
     top: 55.8%;
 }
@@ -558,12 +559,23 @@ button {
 }
 
 @media (max-width: 760px) {
-    .detail--route-1 .composition {
-        transform: translateY(-15%);
+    /*
+     * The composition is one visual unit: its pieces keep their positions
+     * relative to this box, while the box itself is centered in the screen.
+     * This avoids device-dependent vertical offsets caused by the header and
+     * the previous route-specific translateY adjustments.
+     */
+    .detail-inner {
+        position: relative;
+        padding: 20;
     }
 
-    .detail--route-2 .composition {
-        transform: translateY(-20%);
+    .detail .composition {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: 0;
+        transform: translate(-50%, -50%);
     }
 }
 
