@@ -312,7 +312,7 @@ button {
 .calendar-button--route-1 img,
 .calendar-button--route-2 img {
     display: block;
-    width: min(48vw, 240px);
+    width: min(28vw, 140px);
     height: auto;
 }
 
