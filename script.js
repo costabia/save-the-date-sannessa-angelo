@@ -35,5 +35,39 @@ function openInvitation() {
 }
 
 document.querySelectorAll('.screen-hit-area').forEach((button) => button.addEventListener('click', openInvitation));
+
+function addCalendarReminder() {
+  const ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Sannessa e Angelo//Save the Date//PT-BR',
+    'CALSCALE:GREGORIAN',
+    'BEGIN:VEVENT',
+    'UID:sannessa-angelo-2027-08-16@save-the-date',
+    'DTSTAMP:20261118T120000Z',
+    'DTSTART;VALUE=DATE:20270816',
+    'DTEND;VALUE=DATE:20270817',
+    'SUMMARY:Casamento Sannessa e Angelo',
+    'LOCATION:Casa do Valle\\, Chapada dos Guimarães - MT',
+    'DESCRIPTION:Save the Date — Sannessa e Angelo',
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\\r\\n');
+
+  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'sannessa-e-angelo.ics';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+document.querySelectorAll('.calendar-button').forEach((button) => {
+  button.addEventListener('click', addCalendarReminder);
+});
+
 showIntro();
 window.addEventListener('hashchange', () => showIntro());
