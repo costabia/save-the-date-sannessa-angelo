@@ -121,10 +121,16 @@ button {
 
 .cover-lockup {
     top: 7.5%;
+    width: min(24vw, 262px);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
+}
+
+.cover-lockup .save-the-date {
+    width: 100%;
+    max-width: 100%;
 }
 
 .monogram {
@@ -531,6 +537,12 @@ button {
     }
 }
 
+@media (min-width: 761px) and (max-height: 959px) {
+    .intro .cover-save-the-date {
+        display: none;
+    }
+}
+
 @media (max-width: 480px) {
     .intro-names {
         bottom: 12%;
@@ -562,6 +574,15 @@ button {
 }
 
 @media (max-width: 760px) {
+    .intro--route-1 .cover-envelope {
+        display: block;
+    }
+
+    .intro .cover-envelope {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     /*
      * The composition is one visual unit: its pieces keep their positions
      * relative to this box, while the box itself is centered in the screen.
