@@ -37,6 +37,13 @@ function openInvitation() {
 document.querySelectorAll('.screen-hit-area').forEach((button) => button.addEventListener('click', openInvitation));
 
 function addCalendarReminder() {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    window.location.href = 'evento.ics';
+    return;
+  }
+
   const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',

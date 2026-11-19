@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sannessa e Angelo//Save the Date//PT-BR
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:sannessa-angelo-2027-08-16@save-the-date
+DTSTAMP:20261118T120000Z
+DTSTART;VALUE=DATE:20270816
+DTEND;VALUE=DATE:20270817
+SUMMARY:Casamento Sannessa e Angelo
+LOCATION:Casa do Valle\, Chapada dos Guimarães - MT
+DESCRIPTION:Save the Date - Sannessa e Angelo
+END:VEVENT
+END:VCALENDAR

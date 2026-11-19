@@ -243,7 +243,7 @@ button {
 }
 
 .composition--route-2 .invitation {
-    width: 75%;
+    width: 80%;
     left: 21.6%;
     top: 55.8%;
     transform: rotate(5deg);
@@ -290,6 +290,7 @@ button {
     transform: rotate(-9deg);
 }
 
+.calendar-button--route-1,
 .calendar-button--route-2 {
     position: absolute;
     bottom: 4.5%;
@@ -302,6 +303,7 @@ button {
     cursor: pointer;
 }
 
+.calendar-button--route-1 img,
 .calendar-button--route-2 img {
     display: block;
     width: min(48vw, 240px);
@@ -501,6 +503,7 @@ button {
         top: 80%;
     }
 
+    .calendar-button--route-1,
     .calendar-button--route-2 {
         display: none;
     }
@@ -544,8 +547,8 @@ button {
     }
 
     .cover-envelope {
-        top: 30%;
-        width: 67vw;
+        top: 20%;
+        width: 87vw;
     }
 
     .detail-inner {
