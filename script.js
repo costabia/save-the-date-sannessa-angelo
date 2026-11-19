@@ -88,6 +88,8 @@ function addCalendarReminder() {
   URL.revokeObjectURL(url);
 }
 
+document.querySelector('.detail--route-1 .invitation')?.addEventListener('click', addCalendarReminder);
+
 document.querySelectorAll('.calendar-button').forEach((button) => {
   button.addEventListener('click', addCalendarReminder);
 });

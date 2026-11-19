@@ -574,10 +574,6 @@ button {
 }
 
 @media (max-width: 760px) {
-    .intro--route-1 .cover-envelope {
-        display: block;
-    }
-
     .intro .cover-envelope {
         top: 50%;
         transform: translate(-50%, -50%);
@@ -601,6 +597,10 @@ button {
         margin-top: 0;
         transform: translate(-50%, -50%);
     }
+}
+
+.detail--route-1 .invitation {
+    cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {
